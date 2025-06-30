@@ -1,60 +1,60 @@
-# Análisis de Reseñas Tecnológicas (NLP + Deep Learning)
+# 📊 Análisis de Reseñas Tecnológicas (NLP + Deep Learning)
 
-Este proyecto integra técnicas de Procesamiento de Lenguaje Natural (NLP) y aprendizaje automático para analizar reseñas textuales en español y predecir la puntuación asignada por los usuarios.
+Este proyecto integra técnicas de **Procesamiento de Lenguaje Natural (NLP)** y **aprendizaje automático** para analizar reseñas de productos en español y predecir la puntuación otorgada por los usuarios.
 
 ---
 
 ## 📋 Desarrollo realizado
 
 ### 🔍 Análisis exploratorio
-- Visualización de la distribución de puntuaciones.
-- Distribución de categorías de productos.
+- Visualización de la distribución de puntuaciones (1 a 5 estrellas).
+- Análisis de frecuencia por categorías de productos.
 
 ### 🧹 Preprocesamiento del texto
-- Tokenización
-- Lematización
-- Remoción de stopwords
-- Etiquetado gramatical (POS-tagging)
-- Reconocimiento de entidades (NER)
+- **Tokenización**
+- **Lematización**
+- **Remoción de stopwords**
+- **Etiquetado gramatical (POS-tagging)**
+- **Reconocimiento de entidades nombradas (NER)**
 
 ### 📈 Análisis de sentimiento
-- Se utilizó `TextBlob` para calcular polaridad y subjetividad de cada reseña.
-- **Limitación:** TextBlob funciona mejor en inglés, pero se usó como aproximación básica.
+- Se utilizó **TextBlob** para obtener:
+  - **Polaridad** (positiva/negativa)
+  - **Subjetividad** (objetiva/emocional)
+- ⚠️ *Nota:* TextBlob está optimizado para inglés, pero se usó como aproximación básica en español.
 
-### 🧠 Vectorización con TF-IDF
-- Extracción de las palabras más relevantes del corpus.
-- Eliminación de palabras frecuentes sin valor semántico (stopwords).
+### 🧠 Vectorización del texto
+- Se aplicó **TF-IDF** para representar cada reseña como un vector numérico.
+- Se eliminaron palabras comunes sin valor semántico.
 
 ### 🔮 Red neuronal simple
-- Entrenamiento de un modelo para predecir la puntuación (`stars`) basado en texto lematizado.
-- El modelo mostró bajo error de predicción:
-  - MSE ≈ **0.0007**
-  - MAE ≈ **0.002**
-
-⚠️ **Nota:** Estos valores indican un fuerte ajuste, pero también un posible overfitting.
-
----
-
-## ✅ Conclusión final
-
-Este proyecto demuestra cómo aplicar técnicas completas de procesamiento de texto y machine learning sobre datos reales en español. Se cumplió con:
-
-- Preprocesamiento exhaustivo
-- Análisis semántico
-- Representación vectorial
-- Predicción automática con redes neuronales simples
+- Se entrenó una red neuronal densa para predecir la puntuación basada en el texto lematizado.
+- El modelo mostró:
+  - **MSE ≈ 0.0007**
+  - **MAE ≈ 0.002**
+- ⚠️ Estos valores reflejan un fuerte ajuste, posiblemente con overfitting.
 
 ---
 
-## 🚀 Potenciales mejoras
+## ✅ Conclusión
 
-- Usar modelos de análisis de sentimiento entrenados específicamente para español.
-- Aplicar regularización o validación cruzada para evitar overfitting.
-- Probar arquitecturas más complejas (como LSTM o transformers).
+Este proyecto demuestra cómo aplicar un pipeline completo de **procesamiento de texto + deep learning** a datos reales en español. Se logró:
+
+- Preprocesamiento exhaustivo de lenguaje natural
+- Análisis semántico automatizado
+- Representación vectorial con TF-IDF
+- Predicción automática de puntuaciones mediante una red neuronal simple
 
 ---
 
-## 📂 Enlace al proyecto
+## 🚀 Posibles mejoras futuras
+- Utilizar modelos de sentimiento entrenados específicamente en español.
+- Aplicar técnicas de regularización o validación cruzada para evitar overfitting.
+- Probar arquitecturas más complejas (como LSTM, BiLSTM o Transformers).
+
+---
+
+## 📂 Acceso al proyecto
 
 🔗 [Drive con notebook y archivos](https://drive.google.com/drive/folders/1QFKoEDvgIjWeuYxfbJSS4OmLI4iLB_an)
 
